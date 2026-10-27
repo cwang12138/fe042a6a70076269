@@ -1,0 +1,396 @@
+2026-10-16 15:16: ========== Shared args: ==========  
+2026-10-16 15:16: base_seed: 100 
+2026-10-16 15:16: dataset: PEMS08 
+2026-10-16 15:16: duration: 5 
+2026-10-16 15:16: num_nodes: 170 
+2026-10-16 15:16: base_model: MegaCRN 
+2026-10-16 15:16: is_enhanced: True 
+2026-10-16 15:16: dataset start date: 2016-07-01 
+2026-10-16 15:16: dataset end date: 2016-08-31 
+2026-10-16 15:16: num_days: 62 
+2026-10-16 15:16: ========== MegaCRN args: ==========  
+2026-10-16 15:16: base_seed: 100 
+2026-10-16 15:16: trainval_ratio: 0.8 
+2026-10-16 15:16: val_ratio: 0.125 
+2026-10-16 15:16: seq_len 12 
+2026-10-16 15:16: horizon: 12 
+2026-10-16 15:16: input_dim: 1 
+2026-10-16 15:16: output_dim: 1 
+2026-10-16 15:16: num_rnn_layers: 1 
+2026-10-16 15:16: rnn_units: 64 
+2026-10-16 15:16: max_diffusion_step: 3 
+2026-10-16 15:16: mem_num: 20 
+2026-10-16 15:16: mem_dim: 64 
+2026-10-16 15:16: loss: mask_mae_loss 
+2026-10-16 15:16: separate loss lamb: 0.01 
+2026-10-16 15:16: compact loss lamb1: 0.01 
+2026-10-16 15:16: base_batch_size: 64 
+2026-10-16 15:16: epochs: 200 
+2026-10-16 15:16: patience: 20 
+2026-10-16 15:16: lr: 0.01 
+2026-10-16 15:16: epsilon: 0.001 
+2026-10-16 15:16: steps: [50, 100] 
+2026-10-16 15:16: lr_decay_ratio: 0.1 
+2026-10-16 15:16: use_curriculum_learning: True 
+2026-10-16 15:16: ========== STBoost args: ==========  
+2026-10-16 15:16: stb_init_seed: 2025 
+2026-10-16 15:16: p_len: 96 
+2026-10-16 15:16: q_len: 24 
+2026-10-16 15:16: stb_dynamic_spatial_embed_dim: 24 
+2026-10-16 15:16: stb_num_hyper_nodes: 16 
+2026-10-16 15:16: stb_dynamic_cheb_k: 2 
+2026-10-16 15:16: stb_time_embed_dim: 4 
+2026-10-16 15:16: stb_num_period_pattern: 2 
+2026-10-16 15:16: stb_period_mem_dim: 1 
+2026-10-16 15:16: stb_static_spatial_embed_dim: 8 
+2026-10-16 15:16: stb_static_cheb_k: 3 
+2026-10-16 15:16: stb_static_hid_dim: 32 
+2026-10-16 15:16: stb_temporal_embed_dim: 32 
+2026-10-16 15:16: stb_st_mixer_depth: 3 
+2026-10-16 15:16: stb_temporal_dropout: 0.15 
+2026-10-16 15:16: stb_use_input_temporal: True 
+2026-10-16 15:16: stb_use_input_period: True 
+2026-10-16 15:16: stb_use_input_residual: False 
+2026-10-16 15:16: stb_use_period_memorizer: True 
+2026-10-16 15:16: stb_ppm_mode: full 
+2026-10-16 15:16: stb_ppm_align_scaler: 1 
+2026-10-16 15:16: stb_ppm_pad_pairs: 0 
+2026-10-16 15:16: stb_ppm_reshuffle_each_epoch: 1 
+2026-10-16 15:16: stb_ppm_control_rng: 1 
+2026-10-16 15:16: stb_stage2_align_inputs: 1 
+2026-10-16 15:16: stb_sidecar_mode: full 
+2026-10-16 15:16: stb_mlp_hidden_dim: 0 
+2026-10-16 15:16: stb_use_sample_wise_adaptive_graph: True 
+2026-10-16 15:16: stb_use_static_graph: True 
+2026-10-16 15:16: stb_use_spatial_modeling: True 
+2026-10-16 15:16: stb_use_base_prediction: True 
+2026-10-16 15:16: stb_cache_base_prediction: True 
+2026-10-16 15:16: stb_use_inference_cache: False 
+2026-10-16 15:16: stb_inference_cache_root: ./experiments/inference_cache 
+2026-10-16 15:16: stb_batch_size: 64 
+2026-10-16 15:16: stb_use_pretrained: 1 
+2026-10-16 15:16: stb_is_unified_first: False 
+2026-10-16 15:16: stb_unified_switch_epoch: 60 
+2026-10-16 15:16: stb_epochs: 100 
+2026-10-16 15:16: stb_base_lr: 0.001 
+2026-10-16 15:16: stb_lr_milestones: [40, 70, 90] 
+2026-10-16 15:16: stb_patience: 10 
+2026-10-16 15:16: stb_use_curriculum_learning: False 
+2026-10-16 15:16: stb_step_size: None 
+2026-10-16 15:16: stb_reach_frac: 0.4 
+2026-10-16 15:16: stb_unified_init_logit: 4.0 
+2026-10-16 15:16: stb_lamb_mse: 0.0 
+2026-10-16 15:16: stb_use_tod: True 
+2026-10-16 15:16: stb_use_dow: True 
+2026-10-16 15:16: stb_dump_debug_arrays: False 
+2026-10-16 15:16: Initial Dataset Splitting  
+2026-10-16 15:16: original dataset shape:  (17856, 170)  
+2026-10-16 15:16: df_train shape: (12499, 170)  
+2026-10-16 15:16: df_val shape: (1786, 170)  
+2026-10-16 15:16: df_test shape: (3571, 170)  
+2026-10-16 15:16: Loading STBoost sd_mx cache file ./datasets/PEMS08/PEMS08_stboost_sd_mx.npy  
+2026-10-16 15:16: PEMS08 training and testing started Fri Oct 16 15:16:02 2026 
+2026-10-16 15:16: Temporarily switching to the fixed STBoost initialization seed...  
+2026-10-16 15:16: STBoost initialized with Seed 2025. Restored context to the base-model RNG state.  
+2026-10-16 15:16: === Start Enhanced ST Model Pipeline ===  
+2026-10-16 15:16: ====== Generating stage 1 training data! ==========  
+2026-10-16 15:16: train x:  (12476, 12, 170, 2) y:  (12476, 12, 170, 2)  
+2026-10-16 15:16: val x:  (1763, 12, 170, 2) y:  (1763, 12, 170, 2)  
+2026-10-16 15:16: test x:  (3548, 12, 170, 2) y:  (3548, 12, 170, 2)  
+2026-10-16 15:16: train xs.shape, ys.shape (12476, 12, 170, 2) (12476, 12, 170, 2) 
+2026-10-16 15:16: val xs.shape, ys.shape (1763, 12, 170, 2) (1763, 12, 170, 2) 
+2026-10-16 15:16: test xs.shape, ys.shape (3548, 12, 170, 2) (3548, 12, 170, 2) 
+2026-10-16 15:16: Adaptive mask epsilon from scaler round-trip zero: 0  
+2026-10-16 15:16: MegaCRN stage 1 dataloader batch_size: 64  
+2026-10-16 15:16: === Stage 1: Training Base Model ===  
+2026-10-16 15:16: Trainable parameter list:  
+2026-10-16 15:16: base_model.memory.Memory torch.Size([20, 64]) 1280  
+2026-10-16 15:16: base_model.memory.Wq torch.Size([64, 64]) 4096  
+2026-10-16 15:16: base_model.memory.We1 torch.Size([170, 20]) 3400  
+2026-10-16 15:16: base_model.memory.We2 torch.Size([170, 20]) 3400  
+2026-10-16 15:16: base_model.encoder.dcrnn_cells.0.gate.weights torch.Size([390, 128]) 49920  
+2026-10-16 15:16: base_model.encoder.dcrnn_cells.0.gate.bias torch.Size([128]) 128  
+2026-10-16 15:16: base_model.encoder.dcrnn_cells.0.update.weights torch.Size([390, 64]) 24960  
+2026-10-16 15:16: base_model.encoder.dcrnn_cells.0.update.bias torch.Size([64]) 64  
+2026-10-16 15:16: base_model.decoder.dcrnn_cells.0.gate.weights torch.Size([780, 256]) 199680  
+2026-10-16 15:16: base_model.decoder.dcrnn_cells.0.gate.bias torch.Size([256]) 256  
+2026-10-16 15:16: base_model.decoder.dcrnn_cells.0.update.weights torch.Size([780, 128]) 99840  
+2026-10-16 15:16: base_model.decoder.dcrnn_cells.0.update.bias torch.Size([128]) 128  
+2026-10-16 15:16: base_model.proj.0.weight torch.Size([1, 128]) 128  
+2026-10-16 15:16: base_model.proj.0.bias torch.Size([1]) 1  
+2026-10-16 15:16: In total: 387281 trainable parameters.  
+2026-10-16 15:16: loading pretrained base model  
+2026-10-16 15:16: ===================================Best model performance===================================  
+2026-10-16 15:16: The total test time is 2.531667947769165s!  
+2026-10-16 15:16: Horizon 1: mae: 12.13, rmse: 19.06, mape: 8.04%.  
+2026-10-16 15:16: Horizon 2: mae: 12.94, rmse: 20.55, mape: 8.86%.  
+2026-10-16 15:16: Horizon 3: mae: 13.40, rmse: 21.46, mape: 9.06%.  
+2026-10-16 15:16: Horizon 4: mae: 13.76, rmse: 22.18, mape: 9.28%.  
+2026-10-16 15:16: Horizon 5: mae: 14.07, rmse: 22.81, mape: 9.46%.  
+2026-10-16 15:16: Horizon 6: mae: 14.37, rmse: 23.34, mape: 9.66%.  
+2026-10-16 15:16: Horizon 7: mae: 14.65, rmse: 23.81, mape: 9.79%.  
+2026-10-16 15:16: Horizon 8: mae: 14.92, rmse: 24.28, mape: 9.93%.  
+2026-10-16 15:16: Horizon 9: mae: 15.16, rmse: 24.65, mape: 10.10%.  
+2026-10-16 15:16: Horizon 10: mae: 15.36, rmse: 25.03, mape: 10.26%.  
+2026-10-16 15:16: Horizon 11: mae: 15.57, rmse: 25.39, mape: 10.39%.  
+2026-10-16 15:16: Horizon 12: mae: 15.86, rmse: 25.83, mape: 10.59%.  
+2026-10-16 15:16: Average Error: mae: 14.35, rmse: 23.20, mape: 9.62%.  
+2026-10-16 15:16: [PPM Pipeline] align_scaler=True, pairs=513, padding=0, batches=9, reshuffle_each_epoch=True  
+2026-10-16 15:16: === Before Training: Capturing General Pattern via Self-Supervised Learning ===  
+2026-10-16 15:16: Epoch [5/100] train_loss: 0.0221, lr: 0.004269, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [10/100] train_loss: 0.0219, lr: 0.002505, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [15/100] train_loss: 0.0213, lr: 0.000741, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [20/100] train_loss: 0.0211, lr: 0.005000, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [25/100] train_loss: 0.0220, lr: 0.004269, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [30/100] train_loss: 0.0212, lr: 0.002505, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [35/100] train_loss: 0.0212, lr: 0.000741, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [40/100] train_loss: 0.0208, lr: 0.005000, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [45/100] train_loss: 0.0211, lr: 0.004269, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [50/100] train_loss: 0.0225, lr: 0.002505, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [55/100] train_loss: 0.0210, lr: 0.000741, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [60/100] train_loss: 0.0205, lr: 0.005000, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [65/100] train_loss: 0.0205, lr: 0.004269, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [70/100] train_loss: 0.0210, lr: 0.002505, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [75/100] train_loss: 0.0207, lr: 0.000741, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [80/100] train_loss: 0.0203, lr: 0.005000, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [85/100] train_loss: 0.0213, lr: 0.004269, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [90/100] train_loss: 0.0243, lr: 0.002505, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [95/100] train_loss: 0.0204, lr: 0.000741, 0.1s, 0.09GB  
+2026-10-16 15:16: Epoch [100/100] train_loss: 0.0204, lr: 0.005000, 0.1s, 0.09GB  
+2026-10-16 15:16: The total training time is 6.0183 seconds!  
+2026-10-16 15:16: [Memory Report] Peak GPU memory usage range (epochs 1-100): [min: 0.09 GB, max: 0.09 GB]  
+2026-10-16 15:16: [Memory Report] Peak GPU memory usage range (epochs 2-100): [min: 0.09 GB, max: 0.09 GB]  
+2026-10-16 15:16: [Memory Report] Average peak GPU memory usage (epochs 1-100): 0.09 GB  
+2026-10-16 15:16: [Memory Report] Average peak GPU memory usage (epochs 2-100): 0.09 GB  
+2026-10-16 15:16: [PPM Pipeline] Restored the pre-PPM RNG state for Stage 2.  
+2026-10-16 15:16: ====== Generating stage 2 training data! ==========  
+2026-10-16 15:16: train x:  (12380, 96, 170, 2) y:  (12380, 24, 170, 2)  
+2026-10-16 15:16: val x:  (1667, 96, 170, 2) y:  (1667, 24, 170, 2)  
+2026-10-16 15:16: train xs.shape, ys.shape (12380, 96, 170, 2) (12380, 24, 170, 2) 
+2026-10-16 15:16: val xs.shape, ys.shape (1667, 96, 170, 2) (1667, 24, 170, 2) 
+2026-10-16 15:16: Adaptive mask epsilon from scaler round-trip zero: 0  
+2026-10-16 15:16: MegaCRN stage 2 dataloader batch_size: 64  
+2026-10-16 15:16: [PPM Pipeline] Stage 2 uses actual timestamps and aligned base-model input/output scales.  
+2026-10-16 15:16: [PPM Pipeline] storage_scale=raw, PPM scaler mean=230.219985962, std=145.907470703; Stage 2 scaler mean=230.977722168, std=145.967300415  
+2026-10-16 15:16: [PPM Pipeline] Stage 2 train indices SHA256: 810a1b5193f782626dc494f2b65f3b41fc9af36960af35ce655c7f337ee34d99  
+2026-10-16 15:16: === Stage 2: Training STBoost Model ===  
+2026-10-16 15:16: === Building frozen MegaCRN base prediction cache for STBoost stage2 ===  
+2026-10-16 15:16: Building MegaCRN base prediction cache for train, batch_size=64.  
+2026-10-16 15:16: Cached MegaCRN base predictions for train: (12380, 12, 170, 1).  
+2026-10-16 15:16: Building MegaCRN base prediction cache for val, batch_size=64.  
+2026-10-16 15:16: Cached MegaCRN base predictions for val: (1667, 12, 170, 1).  
+2026-10-16 15:16: MegaCRN base prediction cache inference time for ['train', 'val']: 9.56s.  
+2026-10-16 15:16: Slimmed train stage-2 data to value channels: x (12380, 96, 170, 1), y (12380, 24, 170, 1).  
+2026-10-16 15:16: Slimmed val stage-2 data to value channels: x (1667, 96, 170, 1), y (1667, 24, 170, 1).  
+2026-10-16 15:16: Trainable parameter list:  
+2026-10-16 15:16: weight torch.Size([1, 12, 170, 1]) 2040  
+2026-10-16 15:16: booster.node_prior_logit torch.Size([]) 1  
+2026-10-16 15:16: booster.series_emb_layer.weight torch.Size([32, 720, 1, 1]) 23040  
+2026-10-16 15:16: booster.series_emb_layer.bias torch.Size([32]) 32  
+2026-10-16 15:16: booster.graph_summary_proj.weight torch.Size([32, 6]) 192  
+2026-10-16 15:16: booster.graph_summary_proj.bias torch.Size([32]) 32  
+2026-10-16 15:16: booster.hyper_node_memory.representations torch.Size([16, 24]) 384  
+2026-10-16 15:16: booster.hyper_node_memory.query_proj.weight torch.Size([24, 32]) 768  
+2026-10-16 15:16: booster.hyper_node_memory.query_proj.bias torch.Size([24]) 24  
+2026-10-16 15:16: booster.static_to_dynamic_proj.weight torch.Size([24, 8]) 192  
+2026-10-16 15:16: booster.static_to_dynamic_proj.bias torch.Size([24]) 24  
+2026-10-16 15:16: booster.gcn.init_embedding torch.Size([170, 32]) 5440  
+2026-10-16 15:16: booster.gcn.gcn_layers.0.weight torch.Size([32, 32]) 1024  
+2026-10-16 15:16: booster.gcn.gcn_layers.0.bias torch.Size([32]) 32  
+2026-10-16 15:16: booster.gcn.gcn_layers.1.weight torch.Size([32, 32]) 1024  
+2026-10-16 15:16: booster.gcn.gcn_layers.1.bias torch.Size([32]) 32  
+2026-10-16 15:16: booster.gcn.gcn_layers.2.weight torch.Size([8, 32]) 256  
+2026-10-16 15:16: booster.gcn.gcn_layers.2.bias torch.Size([8]) 8  
+2026-10-16 15:16: booster.st_mixer_encoder.pre_mlp.fc1.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.pre_mlp.fc1.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.pre_mlp.fc2.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.pre_mlp.fc2.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.norm.weight torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.norm.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.dgc.weights_pool torch.Size([24, 2, 40, 40]) 76800  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.dgc.bias_pool torch.Size([24, 40]) 960  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.dgc.epsilon torch.Size([1]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.dgc.static_mix_logit torch.Size([]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.spatial_gate.0.weight torch.Size([40, 80]) 3200  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.0.spatial_gate.0.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.norm.weight torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.norm.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.dgc.weights_pool torch.Size([24, 2, 40, 40]) 76800  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.dgc.bias_pool torch.Size([24, 40]) 960  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.dgc.epsilon torch.Size([1]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.dgc.static_mix_logit torch.Size([]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.spatial_gate.0.weight torch.Size([40, 80]) 3200  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.1.spatial_gate.0.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.norm.weight torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.norm.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.dgc.weights_pool torch.Size([24, 2, 40, 40]) 76800  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.dgc.bias_pool torch.Size([24, 40]) 960  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.dgc.epsilon torch.Size([1]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.dgc.static_mix_logit torch.Size([]) 1  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.spatial_gate.0.weight torch.Size([40, 80]) 3200  
+2026-10-16 15:16: booster.st_mixer_encoder.spatial_blocks.2.spatial_gate.0.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.0.fc1.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.0.fc1.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.0.fc2.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.0.fc2.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.1.fc1.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.1.fc1.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.1.fc2.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.1.fc2.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.2.fc1.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.2.fc1.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.2.fc2.weight torch.Size([40, 40, 1, 1]) 1600  
+2026-10-16 15:16: booster.st_mixer_encoder.temporal_blocks.2.fc2.bias torch.Size([40]) 40  
+2026-10-16 15:16: booster.regression_layer.weight torch.Size([24, 40, 1, 1]) 960  
+2026-10-16 15:16: booster.regression_layer.bias torch.Size([24]) 24  
+2026-10-16 15:16: In total: 291895 trainable parameters.  
+2026-10-16 15:16: Epoch [1/100] (194) train_loss: 23.1801, val_loss: 18.6173, lr: 0.001000, 5.1s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from inf to 18.6173, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:16: Epoch [2/100] (388) train_loss: 17.1640, val_loss: 18.0127, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from 18.6173 to 18.0127, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:16: Epoch [3/100] (582) train_loss: 16.5268, val_loss: 17.7095, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from 18.0127 to 17.7095, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:16: Epoch [4/100] (776) train_loss: 16.1369, val_loss: 17.3951, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from 17.7095 to 17.3951, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:16: Epoch [5/100] (970) train_loss: 15.9359, val_loss: 17.2026, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from 17.3951 to 17.2026, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:16: Epoch [6/100] (1164) train_loss: 15.7151, val_loss: 17.1540, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:16: Val loss decrease from 17.2026 to 17.1540, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [7/100] (1358) train_loss: 15.5962, val_loss: 17.1591, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Epoch [8/100] (1552) train_loss: 15.4219, val_loss: 17.0991, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.1540 to 17.0991, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [9/100] (1746) train_loss: 15.3249, val_loss: 17.1102, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Epoch [10/100] (1940) train_loss: 15.2179, val_loss: 17.0904, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.0991 to 17.0904, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [11/100] (2134) train_loss: 15.1428, val_loss: 17.0807, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.0904 to 17.0807, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [12/100] (2328) train_loss: 15.0563, val_loss: 17.0598, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.0807 to 17.0598, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [13/100] (2522) train_loss: 15.0138, val_loss: 17.0170, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.0598 to 17.0170, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [14/100] (2716) train_loss: 14.9288, val_loss: 16.9949, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 17.0170 to 16.9949, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [15/100] (2910) train_loss: 14.8863, val_loss: 17.0191, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Epoch [16/100] (3104) train_loss: 14.8338, val_loss: 17.0453, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Epoch [17/100] (3298) train_loss: 14.7884, val_loss: 16.9901, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 16.9949 to 16.9901, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [18/100] (3492) train_loss: 14.7293, val_loss: 16.8947, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 16.9901 to 16.8947, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:17: Epoch [19/100] (3686) train_loss: 14.6814, val_loss: 16.8741, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:17: Val loss decrease from 16.8947 to 16.8741, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:18: Epoch [20/100] (3880) train_loss: 14.6309, val_loss: 16.8693, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Val loss decrease from 16.8741 to 16.8693, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:18: Epoch [21/100] (4074) train_loss: 14.6005, val_loss: 16.8602, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Val loss decrease from 16.8693 to 16.8602, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:18: Epoch [22/100] (4268) train_loss: 14.5582, val_loss: 16.8157, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Val loss decrease from 16.8602 to 16.8157, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:18: Epoch [23/100] (4462) train_loss: 14.5200, val_loss: 16.8557, lr: 0.001000, 5.0s, 0.89GB  
+2026-10-16 15:18: Epoch [24/100] (4656) train_loss: 14.4841, val_loss: 16.8780, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [25/100] (4850) train_loss: 14.4333, val_loss: 16.7644, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Val loss decrease from 16.8157 to 16.7644, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:18: Epoch [26/100] (5044) train_loss: 14.3991, val_loss: 16.8552, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [27/100] (5238) train_loss: 14.3755, val_loss: 16.8566, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [28/100] (5432) train_loss: 14.3464, val_loss: 16.8204, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [29/100] (5626) train_loss: 14.3206, val_loss: 16.8279, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [30/100] (5820) train_loss: 14.2641, val_loss: 16.8396, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:18: Epoch [31/100] (6014) train_loss: 14.2243, val_loss: 16.8395, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [32/100] (6208) train_loss: 14.1917, val_loss: 16.8111, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [33/100] (6402) train_loss: 14.1624, val_loss: 16.7576, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.7644 to 16.7576, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [34/100] (6596) train_loss: 14.1186, val_loss: 16.7899, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [35/100] (6790) train_loss: 14.0963, val_loss: 16.7590, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [36/100] (6984) train_loss: 14.0654, val_loss: 16.7294, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.7576 to 16.7294, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [37/100] (7178) train_loss: 14.0392, val_loss: 16.7342, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [38/100] (7372) train_loss: 14.0172, val_loss: 16.6076, lr: 0.001000, 5.0s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.7294 to 16.6076, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [39/100] (7566) train_loss: 13.9845, val_loss: 16.6283, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Epoch [40/100] (7760) train_loss: 13.9570, val_loss: 16.5460, lr: 0.001000, 4.9s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.6076 to 16.5460, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [41/100] (7954) train_loss: 13.7850, val_loss: 16.4186, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.5460 to 16.4186, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [42/100] (8148) train_loss: 13.7565, val_loss: 16.3985, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.4186 to 16.3985, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:19: Epoch [43/100] (8342) train_loss: 13.7439, val_loss: 16.3810, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:19: Val loss decrease from 16.3985 to 16.3810, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:20: Epoch [44/100] (8536) train_loss: 13.7315, val_loss: 16.4191, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [45/100] (8730) train_loss: 13.7198, val_loss: 16.3935, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [46/100] (8924) train_loss: 13.7074, val_loss: 16.4128, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [47/100] (9118) train_loss: 13.6888, val_loss: 16.4435, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [48/100] (9312) train_loss: 13.6773, val_loss: 16.4490, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [49/100] (9506) train_loss: 13.6704, val_loss: 16.4209, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [50/100] (9700) train_loss: 13.6509, val_loss: 16.4028, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:20: Epoch [51/100] (9894) train_loss: 13.6372, val_loss: 16.3808, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Val loss decrease from 16.3810 to 16.3808, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:20: Epoch [52/100] (10088) train_loss: 13.6144, val_loss: 16.4368, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [53/100] (10282) train_loss: 13.6011, val_loss: 16.4270, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [54/100] (10476) train_loss: 13.5882, val_loss: 16.4533, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:20: Epoch [55/100] (10670) train_loss: 13.5802, val_loss: 16.4814, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [56/100] (10864) train_loss: 13.5596, val_loss: 16.4746, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [57/100] (11058) train_loss: 13.5469, val_loss: 16.4801, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [58/100] (11252) train_loss: 13.5284, val_loss: 16.5340, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [59/100] (11446) train_loss: 13.5223, val_loss: 16.5025, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Directly enter unified training, when epoch is 60! Reset val baseline and fusion weight to 4.0.  
+2026-10-16 15:21: Epoch [60/100] (11640) train_loss: 13.6201, val_loss: 16.3929, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:21: Val loss decrease from inf to 16.3929, saving to ./experiments/MegaCRN_True/PEMS08/96-24/2026-10-16-15-16-02-7afa073f/best_model.pt  
+2026-10-16 15:21: Epoch [61/100] (11834) train_loss: 13.6045, val_loss: 16.4244, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:21: Epoch [62/100] (12028) train_loss: 13.5856, val_loss: 16.4774, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:21: Epoch [63/100] (12222) train_loss: 13.5712, val_loss: 16.4816, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [64/100] (12416) train_loss: 13.5560, val_loss: 16.4891, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:21: Epoch [65/100] (12610) train_loss: 13.5403, val_loss: 16.5168, lr: 0.000500, 4.9s, 0.89GB  
+2026-10-16 15:21: Epoch [66/100] (12804) train_loss: 13.5271, val_loss: 16.4704, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:21: Epoch [67/100] (12998) train_loss: 13.5143, val_loss: 16.5416, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:22: Epoch [68/100] (13192) train_loss: 13.4989, val_loss: 16.4852, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:22: Epoch [69/100] (13386) train_loss: 13.4836, val_loss: 16.6059, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:22: Epoch [70/100] (13580) train_loss: 13.4674, val_loss: 16.5610, lr: 0.000500, 5.0s, 0.89GB  
+2026-10-16 15:22: Early stopping at epoch: 70  
+2026-10-16 15:22: The training time of per epoch is 4.9284 seconds!  
+2026-10-16 15:22: The total training time is 344.9856 seconds!  
+2026-10-16 15:22: [Memory Report] Peak GPU memory usage range (epochs 1-70): [min: 0.89 GB, max: 0.89 GB]  
+2026-10-16 15:22: [Memory Report] Peak GPU memory usage range (epochs 2-70): [min: 0.89 GB, max: 0.89 GB]  
+2026-10-16 15:22: [Memory Report] Average peak GPU memory usage (epochs 1-70): 0.89 GB  
+2026-10-16 15:22: [Memory Report] Average peak GPU memory usage (epochs 2-70): 0.89 GB  
+2026-10-16 15:22: Released cached MegaCRN base predictions for train.  
+2026-10-16 15:22: Released cached MegaCRN base predictions for val.  
+2026-10-16 15:22: Released train dataloader from memory.  
+2026-10-16 15:22: Released val dataloader from memory.  
+2026-10-16 15:22: ====== Generating stage 2 training data! ==========  
+2026-10-16 15:22: test x:  (3452, 96, 170, 2) y:  (3452, 24, 170, 2)  
+2026-10-16 15:22: test xs.shape, ys.shape (3452, 96, 170, 2) (3452, 24, 170, 2) 
+2026-10-16 15:22: Adaptive mask epsilon from scaler round-trip zero: 0  
+2026-10-16 15:22: MegaCRN stage 2 dataloader batch_size: 64  
+2026-10-16 15:22: === Building frozen MegaCRN base prediction cache for STBoost stage2 ===  
+2026-10-16 15:22: Building MegaCRN base prediction cache for test, batch_size=64.  
+2026-10-16 15:22: Cached MegaCRN base predictions for test: (3452, 12, 170, 1).  
+2026-10-16 15:22: MegaCRN base prediction cache inference time for ['test']: 2.32s.  
+2026-10-16 15:22: Slimmed test stage-2 data to value channels: x (3452, 96, 170, 1), y (3452, 24, 170, 1).  
+2026-10-16 15:22: ===================================Best model performance===================================  
+2026-10-16 15:22: The total test time is 0.4905674457550049s!  
+2026-10-16 15:22: Horizon 1: mae: 12.24, rmse: 19.22, mape: 8.29%.  
+2026-10-16 15:22: Horizon 2: mae: 12.75, rmse: 20.35, mape: 8.49%.  
+2026-10-16 15:22: Horizon 3: mae: 13.20, rmse: 21.19, mape: 9.17%.  
+2026-10-16 15:22: Horizon 4: mae: 13.56, rmse: 21.91, mape: 9.92%.  
+2026-10-16 15:22: Horizon 5: mae: 13.86, rmse: 22.51, mape: 10.22%.  
+2026-10-16 15:22: Horizon 6: mae: 14.07, rmse: 23.04, mape: 10.07%.  
+2026-10-16 15:22: Horizon 7: mae: 14.22, rmse: 23.46, mape: 9.41%.  
+2026-10-16 15:22: Horizon 8: mae: 14.43, rmse: 23.90, mape: 9.54%.  
+2026-10-16 15:22: Horizon 9: mae: 14.61, rmse: 24.20, mape: 9.66%.  
+2026-10-16 15:22: Horizon 10: mae: 14.76, rmse: 24.50, mape: 9.74%.  
+2026-10-16 15:22: Horizon 11: mae: 14.90, rmse: 24.77, mape: 9.91%.  
+2026-10-16 15:22: Horizon 12: mae: 15.02, rmse: 25.04, mape: 10.06%.  
+2026-10-16 15:22: Horizon 13: mae: 15.25, rmse: 25.37, mape: 10.69%.  
+2026-10-16 15:22: Horizon 14: mae: 15.38, rmse: 25.73, mape: 10.30%.  
+2026-10-16 15:22: Horizon 15: mae: 15.53, rmse: 25.98, mape: 10.58%.  
+2026-10-16 15:22: Horizon 16: mae: 15.65, rmse: 26.16, mape: 10.97%.  
+2026-10-16 15:22: Horizon 17: mae: 15.69, rmse: 26.30, mape: 10.63%.  
+2026-10-16 15:22: Horizon 18: mae: 15.76, rmse: 26.47, mape: 10.58%.  
+2026-10-16 15:22: Horizon 19: mae: 15.98, rmse: 26.70, mape: 11.70%.  
+2026-10-16 15:22: Horizon 20: mae: 16.10, rmse: 26.89, mape: 11.43%.  
+2026-10-16 15:22: Horizon 21: mae: 16.20, rmse: 27.00, mape: 11.47%.  
+2026-10-16 15:22: Horizon 22: mae: 16.28, rmse: 27.17, mape: 11.32%.  
+2026-10-16 15:22: Horizon 23: mae: 16.43, rmse: 27.36, mape: 11.70%.  
+2026-10-16 15:22: Horizon 24: mae: 16.57, rmse: 27.57, mape: 11.30%.  
+2026-10-16 15:22: Average Error: mae: 14.93, rmse: 24.70, mape: 10.30%.  
+2026-10-16 15:22: Released cached MegaCRN base predictions for test.  
+2026-10-16 15:22: Released test dataloader from memory.  
+2026-10-16 15:22: PEMS08 training and testing ended Fri Oct 16 15:22:14 2026 
